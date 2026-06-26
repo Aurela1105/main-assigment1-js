@@ -1,7 +1,3 @@
-// ============================================
-// DEFEAT THE EVIL AI: Number Guessing Game
-// ============================================
-
 console.log("╔════════════════════════════════════════╗");
 console.log("║  WELCOME TO THE EVIL AI CHALLENGE!    ║");
 console.log("║        Number Guessing Game           ║");
