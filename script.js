@@ -52,3 +52,12 @@ function getPlayerGuess() {
         return guess;
     }
 }
+function checkGuess(playerGuess, correctNumber) {
+    if (playerGuess === correctNumber) {
+        return "correct";
+    } else if (playerGuess < correctNumber) {
+        return "too low";
+    } else {
+        return "too high";
+    }
+}
