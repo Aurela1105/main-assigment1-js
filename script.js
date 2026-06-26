@@ -57,3 +57,14 @@ function checkGuess(playerGuess, correctNumber) {
         return "too high";
     }
 }
+function calculateScore(attempts) {
+    if (attempts <= 3) {
+        return 1000;
+    } else if (attempts <= 6) {
+        return 750;
+    } else if (attempts <= 9) {
+        return 500;
+    } else {
+        return 250;
+    }
+}
