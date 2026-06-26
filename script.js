@@ -14,6 +14,7 @@ console.log("2. You have a MAXIMUM of 10 attempts to guess it");
 console.log("3. After each guess, I will tell you if you're too low or too high");
 console.log("4. Guess correctly to WIN and earn points!");
 console.log("5. The faster you guess, the more points you earn");
+console.log("6. Type game() to start playing");
 console.log("\n💡 SCORING SYSTEM:");
 console.log("   • Guess in 1-3 attempts: 1000 points 🏆");
 console.log("   • Guess in 4-6 attempts: 750 points 🥇");
@@ -23,7 +24,7 @@ console.log("   • Fail to guess: 0 points ✗");
 console.log("-------------------------------------------\n");
 
 
-game();
+
 
 
 function generateRandomNumber() {
@@ -38,6 +39,7 @@ function getPlayerGuess() {
         input = prompt("Enter your guess (1-100):");
         if (input === null) {
             console.log("You cancelled the game. Game ended.");
+            return false;
         }
         input = input.trim();
         if (input === "") {
@@ -94,6 +96,10 @@ function game() {
 
             // Get player's guess
             const playerGuess = getPlayerGuess();
+            if(playerGuess===false){
+                break;
+            }
+
             console.log(`You guessed: ${playerGuess}`);
 
             // Check the guess
