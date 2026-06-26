@@ -1,4 +1,4 @@
-// ============================================
+    // ============================================
 // DEFEAT THE EVIL AI: Number Guessing Game
 // ============================================
 
@@ -21,6 +21,10 @@ console.log("   • Guess in 7-9 attempts: 500 points 🥈");
 console.log("   • Guess in 10 attempts: 250 points 🥉");
 console.log("   • Fail to guess: 0 points ✗");
 console.log("-------------------------------------------\n");
+// Start the game automatically when the page loads
+
+game();
+
 
 /**
  * Generates a random number between 1 and 100 (inclusive)
@@ -35,45 +39,7 @@ function generateRandomNumber() {
  * Reprompts until a valid number is provided
  * @returns {number} Player's valid guess as an integer
  */
-function getPlayerGuess() {
-    let input;
-    let guess;
 
-    while (true) {
-        input = prompt("🤔 Enter your guess (1-100):");
-
-        // Handle cancel button
-        if (input === null) {
-            console.log("❌ You cancelled the game. Game ended.");
-            throw new Error("Game cancelled by player");
-        }
-
-        // Trim whitespace and check if empty
-        input = input.trim();
-        if (input === "") {
-            console.log("⚠️  Please enter a number. Try again.");
-            continue;
-        }
-
-        // Try to convert to integer
-        guess = parseInt(input, 10);
-
-        // Validate that it's a valid number
-        if (isNaN(guess)) {
-            console.log("⚠️  That's not a valid number. Please enter a numeric value.");
-            continue;
-        }
-
-        // Validate range
-        if (guess < 1 || guess > 100) {
-            console.log("⚠️  Please enter a number between 1 and 100.");
-            continue;
-        }
-
-        // Valid guess received
-        return guess;
-    }
-}
 
 /**
  * Compares the player's guess to the correct number
@@ -112,8 +78,8 @@ function calculateScore(attempts) {
  * Main game function that orchestrates the entire number guessing game
  */
 function game() {
-    try {
         // Generate the random number
+       
         const correctNumber = generateRandomNumber();
         const maxAttempts = 10;
         let attemptCount = 0;
@@ -179,14 +145,38 @@ function game() {
 
         console.log("\n💾 To play again, refresh the page or type: game()");
 
-    } catch (error) {
-        if (error.message === "Game cancelled by player") {
-            console.log("👋 Thanks for playing!");
-        } else {
-            console.error("❌ An unexpected error occurred:", error.message);
-        }
-    }
 }
+function getPlayerGuess() {
+    while (true) {
+        let input;
+        input = prompt("🤔 Enter your guess (1-100):");
+        // Handle cancel button
+        if (input === null) {
+            console.log("❌ You cancelled the game. Game ended.");
+        }
 
-// Start the game automatically when the page loads
-game();
+        // Trim whitespace and check if empty
+        if (input === "") {
+            console.log("⚠️  Please enter a number. Try again.");
+            continue;
+        }
+
+        // Try to convert to integer
+         let guess = parseInt(input, 10);
+
+        // Validate that it's a valid number
+        if (isNaN(guess)) {
+            console.log("⚠️  That's not a valid number. Please enter a numeric value.");
+            continue;
+        }
+
+        // Validate range
+        if (guess < 1 || guess > 100) {
+            console.log("⚠️  Please enter a number between 1 and 100.");
+            continue;
+        }
+
+        // Valid guess received
+        return guess;
+    }
+};
