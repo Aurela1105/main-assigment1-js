@@ -156,3 +156,4 @@ function game() {
 
     console.log("\n🔄 Type game() to play again.");
 }
+game();
