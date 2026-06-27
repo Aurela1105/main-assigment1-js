@@ -100,7 +100,7 @@ function game() {
         console.log("Your score: 0 points");
     }
 
-    console.log("Type game() to play again.");
+    console.log("Game started Good luck!");
 }
 alert("Welcome to the Number Guessing Game!");
 
