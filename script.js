@@ -102,5 +102,16 @@ function game() {
 
     console.log("Type game() to play again.");
 }
+alert("Welcome to the Number Guessing Game!");
 
+console.log("🎮 NUMBER GUESSING GAME");
+console.log("----------------------------");
+console.log("📊 SCORING SYSTEM");
+console.log("1-3 attempts  = 1000 points 🏆");
+console.log("4-6 attempts  = 750 points 🥈");
+console.log("7-9 attempts  = 500 points 🥉");
+console.log("10 attempts   = 250 points");
+console.log("Lose the game = 0 points");
+console.log("----------------------------");
+console.log("Type game() to start playing.");
 game();
