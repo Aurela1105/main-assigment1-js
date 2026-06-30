@@ -1,9 +1,3 @@
-alert("👋 Welcome to the Number Guessing Game!\n" +
-    "⚠️ IMPORTANT: This game runs in the browser Console.\n" +
-    "Please open your Developer Tools Console to see your progress and results:\n" +
-    "💻 Windows/Linux: Press F12 or Ctrl + Shift + J\n" +
-    "🍎 Mac: Press Cmd + Option + J\n" +
-    "Click OK once you have opened the Console to start playing!");
 
 function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
@@ -107,6 +101,14 @@ function game() {
 
     console.log("Game started Good luck!");
 }
+alert(
+    "👋 Welcome to the Number Guessing Game!\n\n" +
+    "⚠️ IMPORTANT: This game runs entirely in the browser Console.\n" +
+    "Please open your Developer Tools Console to see your feedback and instructions:\n\n" +
+    "💻 Windows/Linux: Press F12 or Ctrl + Shift + J\n" +
+    "🍎 Mac: Press Cmd + Option + J\n\n" +
+    "Press OK after opening the Console!"
+);
 
 console.log("🎮 NUMBER GUESSING GAME");
 console.log("----------------------------");
@@ -117,5 +119,4 @@ console.log("7-9 attempts  = 500 points 🥉");
 console.log("10 attempts   = 250 points");
 console.log("Lose the game = 0 points");
 console.log("----------------------------");
-console.log("Type game() to start playing.");
-game();
+console.log("👉 Ready? Type game() in the console below and press Enter to start playing!");
