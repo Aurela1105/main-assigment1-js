@@ -1,8 +1,8 @@
-alert("👋 Welcome to the Number Guessing Game!\n\n" +
+alert("👋 Welcome to the Number Guessing Game!\n" +
     "⚠️ IMPORTANT: This game runs in the browser Console.\n" +
-    "Please open your Developer Tools Console to see your progress and results:\n\n" +
+    "Please open your Developer Tools Console to see your progress and results:\n" +
     "💻 Windows/Linux: Press F12 or Ctrl + Shift + J\n" +
-    "🍎 Mac: Press Cmd + Option + J\n\n" +
+    "🍎 Mac: Press Cmd + Option + J\n" +
     "Click OK once you have opened the Console to start playing!");
 
 function generateRandomNumber() {
@@ -107,7 +107,6 @@ function game() {
 
     console.log("Game started Good luck!");
 }
-alert("Welcome to the Number Guessing Game!");
 
 console.log("🎮 NUMBER GUESSING GAME");
 console.log("----------------------------");
