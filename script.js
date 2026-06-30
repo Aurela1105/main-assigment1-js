@@ -1,4 +1,9 @@
-alert("Welcome! The game will start now.");
+alert("👋 Welcome to the Number Guessing Game!\n\n" +
+    "⚠️ IMPORTANT: This game runs in the browser Console.\n" +
+    "Please open your Developer Tools Console to see your progress and results:\n\n" +
+    "💻 Windows/Linux: Press F12 or Ctrl + Shift + J\n" +
+    "🍎 Mac: Press Cmd + Option + J\n\n" +
+    "Click OK once you have opened the Console to start playing!");
 
 function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
