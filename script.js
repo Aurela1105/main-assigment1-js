@@ -1,6 +1,6 @@
-alert("👋 Welcome to the Number Guessing Game!\n" +
+alert("👋 Welcome to the Number Guessing Game!" +
     "⚠️ IMPORTANT: This game runs in the browser Console.\n" +
-    "Please open your Developer Tools Console to see your progress and results:\n" +
+    "Please open your Developer Tools Console to see your progress and results:" +
     "💻 Windows/Linux: Press F12 or Ctrl + Shift + J\n" +
     "🍎 Mac: Press Cmd + Option + J\n" +
     "Click OK once you have opened the Console to start playing!");
