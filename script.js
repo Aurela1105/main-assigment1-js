@@ -98,8 +98,6 @@ function game() {
         console.log(`The number was: ${correctNumber}`);
         console.log("Your score: 0 points");
     }
-
-    console.log("Game started Good luck!");
 }
 alert(
     "👋 Welcome to the Number Guessing Game!\n\n" +
